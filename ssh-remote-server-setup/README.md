@@ -65,7 +65,7 @@ ssh -i "~/.ssh/cloud_vm" ubuntu@<ip_address>
 Create a `config` file under `.ssh` folder with below contents in your local system.
 
 ```
-Host cloud_vm
+Host cloud_vm <- Can be anything you like
   HostName <ip_address>
   User ubuntu
   IdentityFile ~/.ssh/cloud_vm
