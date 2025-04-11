@@ -1,6 +1,6 @@
 # SSH Remote Server
 
-## Why Multipass?
+## Multipass
 
 Multipass allows you to launch and manage Ubuntu virtual machines easily. By using **bridged networking**, we can simulate real cloud VM behavior with direct IP access and SSH connections. This saves from relying on cloud environments for small projects.
 
