@@ -59,7 +59,16 @@ Copy the contents of `cloud_vm.pub` to `~/.ssh/authorized_keys` in server you ca
 Now you can login to you server using the below command similary you can create multiple keys and try it
 
 ```
-ssh ubuntu@<ip_address>
+ssh -i "~/.ssh/cloud_vm" ubuntu@<ip_address>
+```
+
+Create a `config` file under `.ssh` folder with below contents
+
+```
+Host cloud_vm
+  HostName <ip_address>
+  User ubuntu
+  IdentityFile ~/.ssh/cloud_vm
 ```
 
 
