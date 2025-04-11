@@ -1,10 +1,9 @@
 # SSH Remote Server
 
-## Why Multipass?
+## Multipass
 
 Multipass allows you to launch and manage Ubuntu virtual machines easily. By using **bridged networking**, we can simulate real cloud VM behavior with direct IP access and SSH connections. This saves from relying on cloud environments for small projects.
 
----
 
 ## Steps to Set Up Your Local Cloud Environment
 
@@ -47,20 +46,35 @@ Run a new server with
 multipass launch --name myvm-01 --network Wi-Fi <- Your Network Name
 multipass info myvm-01
 ```
-### 2. 🌐 Working with SSH Key Pair
+### 2. Working with SSH Key Pair
 
-Creating ssh keys the following commad will create 2 files `id_rsa` and `id_rsa.pub`
-
-```
-ssh-keygen -t rsa -b 4096
-```
-
-Copy the contents of `id_rsa.pub` to `~/.ssh/authorized_keys` you can use multipass shell command mentioned above to do this.
-
-Now you can login to you server using the below command
+Creating ssh keys the following commad will create 2 files `cloud_vm` and `cloud_vm.pub`
 
 ```
-ssh ubuntu@<ip_address>
+ssh-keygen -t rsa -b 4096 -C "cloud_vm" -f ~/.ssh/cloud_vm
+```
+
+Copy the contents of `cloud_vm.pub` to `~/.ssh/authorized_keys` in server you can use multipass shell command mentioned above to do this.
+
+Now you can login to you server using the below command similary you can create multiple keys and try it
+
+```
+ssh -i "~/.ssh/cloud_vm" ubuntu@<ip_address>
+```
+
+Create a `config` file under `.ssh` folder with below contents in your local system.
+
+```
+Host cloud_vm <- Can be anything you like
+  HostName <ip_address>
+  User ubuntu
+  IdentityFile ~/.ssh/cloud_vm
+```
+
+Run below command to login now
+
+```
+ssh cloud_vm
 ```
 
 
