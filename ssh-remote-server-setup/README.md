@@ -4,7 +4,6 @@
 
 Multipass allows you to launch and manage Ubuntu virtual machines easily. By using **bridged networking**, we can simulate real cloud VM behavior with direct IP access and SSH connections. This saves from relying on cloud environments for small projects.
 
----
 
 ## Steps to Set Up Your Local Cloud Environment
 
@@ -47,7 +46,7 @@ Run a new server with
 multipass launch --name myvm-01 --network Wi-Fi <- Your Network Name
 multipass info myvm-01
 ```
-### 2. 🌐 Working with SSH Key Pair
+### 2. Working with SSH Key Pair
 
 Creating ssh keys the following commad will create 2 files `id_rsa` and `id_rsa.pub`
 
