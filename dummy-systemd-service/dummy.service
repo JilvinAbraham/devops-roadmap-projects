@@ -1,0 +1,14 @@
+[Unit]
+Description=My Dummy Script Service
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/dummy.sh
+WorkingDirectory=/home/ubuntu
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
