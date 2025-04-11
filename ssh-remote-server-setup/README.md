@@ -62,13 +62,19 @@ Now you can login to you server using the below command similary you can create 
 ssh -i "~/.ssh/cloud_vm" ubuntu@<ip_address>
 ```
 
-Create a `config` file under `.ssh` folder with below contents
+Create a `config` file under `.ssh` folder with below contents in your local system.
 
 ```
 Host cloud_vm
   HostName <ip_address>
   User ubuntu
   IdentityFile ~/.ssh/cloud_vm
+```
+
+Run below command to login now
+
+```
+ssh cloud_vm
 ```
 
 
