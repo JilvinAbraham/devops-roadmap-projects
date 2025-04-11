@@ -1,0 +1,10 @@
+---
+- name: Complete Server Setup
+  hosts: web
+  become: true
+
+  roles:
+    - base
+    - nginx
+    - app
+    - ssh

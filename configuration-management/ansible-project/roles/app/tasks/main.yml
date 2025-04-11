@@ -1,0 +1,16 @@
+---
+- name: Upload static site archive
+  copy:
+    src: site.tar.gz
+    dest: /var/www/html/site.tar.gz
+
+- name: Extract website to nginx root
+  unarchive:
+    src: /var/www/html/site.tar.gz
+    dest: /var/www/html/
+    remote_src: yes
+
+- name: Remove archive after extracting
+  file:
+    path: /var/www/html/site.tar.gz
+    state: absent
