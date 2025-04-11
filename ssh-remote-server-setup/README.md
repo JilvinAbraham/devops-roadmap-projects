@@ -52,7 +52,6 @@ Creating ssh keys the following commad will create 2 files `cloud_vm` and `cloud
 
 ```
 ssh-keygen -t rsa -b 4096 -C "cloud_vm" -f ~/.ssh/cloud_vm
-
 ```
 
 Copy the contents of `cloud_vm.pub` to `~/.ssh/authorized_keys` in server you can use multipass shell command mentioned above to do this.
