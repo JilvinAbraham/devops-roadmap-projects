@@ -57,7 +57,7 @@ ssh-keygen -t rsa -b 4096 -C "cloud_vm" -f ~/.ssh/cloud_vm
 
 Copy the contents of `cloud_vm.pub` to `~/.ssh/authorized_keys` in server you can use multipass shell command mentioned above to do this.
 
-Now you can login to you server using the below command similary ypu can create multiple keys and try it
+Now you can login to you server using the below command similary you can create multiple keys and try it
 
 ```
 ssh ubuntu@<ip_address>
