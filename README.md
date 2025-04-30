@@ -6,3 +6,4 @@
 4. SSH remote Server: https://roadmap.sh/projects/ssh-remote-server-setup
 5. Dummy Systemd Service: https://roadmap.sh/projects/dummy-systemd-service
 6. Configuration Management: https://roadmap.sh/projects/configuration-management
+7. File Integrity Checker: https://roadmap.sh/projects/file-integrity-checker
